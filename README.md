@@ -24,4 +24,4 @@ A modern, stylish, and interactive To-do List web app built using HTML, CSS, and
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/your-username/todo-list-by-abhinav.git
+    git clone https://github.com/abhiii9vvv/todo-list-by-abhinav.git
