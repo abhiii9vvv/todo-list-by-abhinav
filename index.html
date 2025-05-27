@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoFlow - Advanced ToDo List</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <h2>ToDoFlow</h2>
+          <p class="tagline">Your smart task manager</p>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#" class="active">🏠 Dashboard</a>
+          <a href="#">📅 Today</a>
+          <a href="#">📆 Upcoming</a>
+          <a href="#">✅ Completed</a>
+          <a href="#">⚙️ Settings</a>
+        </nav>
+
+        <div class="tag-section">
+          <h3>Tags</h3>
+          <div class="tags">
+            <span class="tag tag-work">Work</span>
+            <span class="tag tag-personal">Personal</span>
+            <span class="tag tag-study">Study</span>
+            <span class="tag tag-health">Health</span>
+            <span class="tag tag-other">Other</span>
+          </div>
+        </div>
+
+        <footer class="sidebar-footer">
+          <div class="social-links">
+            <a
+              href="https://github.com/abhiii9vvv"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            |
+            <a
+              href="https://www.linkedin.com/in/abhinav-tiwary-791a63302/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+          </div>
+          <p>© 2025 ToDoFlow</p>
+        </footer>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="main-header">
+          <h1>Welcome Back 👋</h1>
+          <div class="header-actions">
+            <input
+              type="search"
+              placeholder="Search tasks..."
+              id="searchInput"
+            />
+            <button id="addTaskBtn">+ Add Task</button>
+          </div>
+        </header>
+
+        <!-- Filter Section -->
+        <section class="filter-bar">
+          <div class="filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Today</button>
+            <button class="filter-btn">Upcoming</button>
+            <button class="filter-btn">Important</button>
+          </div>
+          <div class="sort">
+            <label for="sortBy">Sort by:</label>
+            <select id="sortBy">
+              <option value="date">Date</option>
+              <option value="priority">Priority</option>
+              <option value="status">Status</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Task Sections -->
+        <section class="task-board">
+          <div class="task-column" id="work">
+            <h3>🗂️ Work</h3>
+            <ul class="task-list" id="work-tasks">
+              <!-- Tasks injected here -->
+            </ul>
+          </div>
+          <div class="task-column" id="personal">
+            <h3>🏡 Personal</h3>
+            <ul class="task-list" id="personal-tasks"></ul>
+          </div>
+          <div class="task-column" id="study">
+            <h3>📖 Study</h3>
+            <ul class="task-list" id="study-tasks"></ul>
+          </div>
+          <div class="task-column" id="health">
+            <h3>💪 Health</h3>
+            <ul class="task-list" id="health-tasks"></ul>
+          </div>
+        </section>
+        <!-- Task Modal -->
+        <div id="taskModal" class="modal hidden">
+          <div class="modal-content">
+            <h2>➕ Add New Task</h2>
+            <input
+              type="text"
+              id="taskTitle"
+              placeholder="Task title..."
+              required
+            />
+            <textarea
+              id="taskDescription"
+              placeholder="Description (optional)"
+            ></textarea>
+            <div class="modal-row">
+              <label for="taskCategory">Category:</label>
+              <select id="taskCategory">
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="study">Study</option>
+                <option value="health">Health</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="modal-row">
+              <label for="taskDueDate">Due Date:</label>
+              <input type="date" id="taskDueDate" />
+            </div>
+            <div class="modal-row">
+              <label for="taskPriority">Priority:</label>
+              <select id="taskPriority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+            <div class="modal-actions">
+              <button id="saveTaskBtn">Save Task</button>
+              <button id="cancelTaskBtn" class="cancel">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sample Task Template (can be cloned via JS) -->
+        <template id="taskTemplate">
+          <li class="task-item">
+            <div class="task-header">
+              <input type="checkbox" class="task-check" />
+              <h4 class="task-title">Sample Task</h4>
+            </div>
+            <p class="task-desc">Description here...</p>
+            <div class="task-footer">
+              <span class="task-priority high">High</span>
+              <span class="task-date">Due: 2025-06-01</span>
+              <button class="delete-task">🗑️</button>
+            </div>
+          </li>
+        </template>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+          <p>Made with ❤️ by Abhinav | ToDoFlow 2025</p>
+        </footer>
+      </main>
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
