@@ -40,18 +40,8 @@
 ---
 
 ## 📸 Live Preview
+![image](https://github.com/user-attachments/assets/3bff2aef-5607-42a9-8ba5-0b95392bf60d)
 
-### Dashboard  
-![Dashboard Preview](path/to/dashboard-screenshot.png)  
-*A clean overview of categorized tasks with filters and sorting.*
-
-### Add Task Modal  
-![Add Task Modal](path/to/add-task-modal.png)  
-*Modal popup for adding new tasks with fields and validation.*
-
-> Replace `path/to/...` with actual image URLs or local paths.
-
----
 
 ## 🚀 Getting Started
 
