@@ -2,15 +2,6 @@
 
 **ToDoFlow** is a sleek, modern, and intuitive task management web app designed to boost your productivity by organizing your tasks with ease.
 
----
-
-![GitHub repo size](https://img.shields.io/github/repo-size/abhiii9vvv/ToDoFlow?style=flat-square)
-![GitHub stars](https://img.shields.io/github/stars/abhiii9vvv/ToDoFlow?style=flat-square)
-![GitHub forks](https://img.shields.io/github/forks/abhiii9vvv/ToDoFlow?style=flat-square)
-![GitHub issues](https://img.shields.io/github/issues/abhiii9vvv/ToDoFlow?style=flat-square)
-
----
-
 ## 🌟 Features
 
 - **Clean and responsive UI** with smooth UX
